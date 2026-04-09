@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>银发价值共创平台 - 手机版</title>
+    <link rel="stylesheet" href="mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 底部导航栏 -->
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item active" data-page="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">首页</span>
+        </a>
+        <a href="#services" class="nav-item" data-page="services">
+            <span class="nav-icon">🎯</span>
+            <span class="nav-text">服务</span>
+        </a>
+        <a href="#experts" class="nav-item" data-page="experts">
+            <span class="nav-icon">👥</span>
+            <span class="nav-text">专家</span>
+        </a>
+        <a href="#courses" class="nav-item" data-page="courses">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">学堂</span>
+        </a>
+        <a href="#profile" class="nav-item" data-page="profile">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">我的</span>
+        </a>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="page active">
+        <!-- 顶部状态栏 -->
+        <div class="status-bar">
+            <span class="time">09:41</span>
+            <div class="status-icons">
+                <span>📶</span>
+                <span>📡</span>
+                <span>🔋</span>
+            </div>
+        </div>
+
+        <!-- 搜索栏 -->
+        <div class="search-bar">
+            <div class="search-input">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="搜索专家、课程、服务...">
+            </div>
+            <button class="msg-btn">💬</button>
+        </div>
+
+        <!-- 轮播Banner -->
+        <div class="banner-slider">
+            <div class="banner active" style="background: linear-gradient(135deg, #2E5C8A, #4A7BA7);">
+                <div class="banner-content">
+                    <h2>重新定义银发经济</h2>
+                    <p>老年人不只是消费者，更是价值创造者</p>
+                    <button class="banner-btn">立即加入</button>
+                </div>
+            </div>
+            <div class="banner" style="background: linear-gradient(135deg, #F5A623, #F7B84C);">
+                <div class="banner-content">
+                    <h2>银发智库招募</h2>
+                    <p>分享您的专业经验，获得收入与成就感</p>
+                    <button class="banner-btn">申请入驻</button>
+                </div>
+            </div>
+            <div class="banner-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <!-- 快捷入口 -->
+        <div class="quick-entry">
+            <div class="entry-item" data-service="thinktank">
+                <div class="entry-icon" style="background: #E8F4FD;">🧠</div>
+                <span>银发智库</span>
+            </div>
+            <div class="entry-item" data-service="academy">
+                <div class="entry-icon" style="background: #FFF3E0;">📚</div>
+                <span>银发学堂</span>
+            </div>
+            <div class="entry-item" data-service="mutual">
+                <div class="entry-icon" style="background: #F3E5F5;">💝</div>
+                <span>银发互助</span>
+            </div>
+            <div class="entry-item" data-service="create">
+                <div class="entry-icon" style="background: #E8F5E9;">✍️</div>
+                <span>银发创作</span>
+            </div>
+        </div>
+
+        <!-- 平台数据 -->
+        <div class="platform-stats">
+            <div class="stat-box">
+                <span class="stat-num">10,000+</span>
+                <span class="stat-label">注册专家</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-num">50,000+</span>
+                <span class="stat-label">活跃用户</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-num">¥500万+</span>
+                <span class="stat-label">创造价值</span>
+            </div>
+        </div>
+
+        <!-- 推荐专家 -->
+        <div class="section-header">
+            <h3>推荐专家</h3>
+            <a href="#experts" class="more-link">查看更多 ></a>
+        </div>
+
+        <div class="expert-list">
+            <div class="expert-card-mini">
+                <div class="expert-avatar-mini">👨‍⚕️</div>
+                <div class="expert-info-mini">
+                    <h4>李秀芳 <span class="expert-tag">主任医师</span></h4>
+                    <p>40年内科临床经验</p>
+                    <div class="expert-meta">
+                        <span class="rating">★ 5.0</span>
+                        <span class="price">¥300/小时</span>
+                    </div>
+                </div>
+                <button class="btn-book">预约</button>
+            </div>
+
+            <div class="expert-card-mini">
+                <div class="expert-avatar-mini">👨‍💼</div>
+                <div class="expert-info-mini">
+                    <h4>张建国 <span class="expert-tag">高级工程师</span></h4>
+                    <p>35年机械设计经验</p>
+                    <div class="expert-meta">
+                        <span class="rating">★ 4.9</span>
+                        <span class="price">¥500/小时</span>
+                    </div>
+                </div>
+                <button class="btn-book">预约</button>
+            </div>
+
+            <div class="expert-card-mini">
+                <div class="expert-avatar-mini">👩‍🏫</div>
+                <div class="expert-info-mini">
+                    <h4>陈雅琴 <span class="expert-tag">特级教师</span></h4>
+                    <p>38年中学语文教学</p>
+                    <div class="expert-meta">
+                        <span class="rating">★ 4.9</span>
+                        <span class="price">¥200/小时</span>
+                    </div>
+                </div>
+                <button class="btn-book">预约</button>
+            </div>
+        </div>
+
+        <!-- 热门课程 -->
+        <div class="section-header">
+            <h3>热门课程</h3>
+            <a href="#courses" class="more-link">查看更多 ></a>
+        </div>
+
+        <div class="course-scroll">
+            <div class="course-card-mini">
+                <div class="course-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="course-icon">📱</span>
+                </div>
+                <div class="course-info-mini">
+                    <h4>智能手机使用入门</h4>
+                    <p>刘大爷 · 1,234人学习</p>
+                    <span class="course-price-free">免费</span>
+                </div>
+            </div>
+
+            <div class="course-card-mini">
+                <div class="course-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <span class="course-icon">💰</span>
+                </div>
+                <div class="course-info-mini">
+                    <h4>退休理财规划</h4>
+                    <p>赵阿姨 · 892人学习</p>
+                    <span class="course-price">¥29</span>
+                </div>
+            </div>
+
+            <div class="course-card-mini">
+                <div class="course-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <span class="course-icon">🌺</span>
+                </div>
+                <div class="course-info-mini">
+                    <h4>家庭园艺技巧</h4>
+                    <p>孙奶奶 · 2,156人学习</p>
+                    <span class="course-price-free">免费</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 互助服务 -->
+        <div class="section-header">
+            <h3>互助服务</h3>
+            <a href="#" class="more-link">发布需求 ></a>
+        </div>
+
+        <div class="mutual-services">
+            <div class="mutual-card">
+                <span class="mutual-icon">👥</span>
+                <span class="mutual-name">陪伴聊天</span>
+                <span class="mutual-price">¥30/小时</span>
+            </div>
+            <div class="mutual-card">
+                <span class="mutual-icon">🏥</span>
+                <span class="mutual-name">就医陪同</span>
+                <span class="mutual-price">¥50/次</span>
+            </div>
+            <div class="mutual-card">
+                <span class="mutual-icon">🛒</span>
+                <span class="mutual-name">购物协助</span>
+                <span class="mutual-price">¥20/次</span>
+            </div>
+            <div class="mutual-card">
+                <span class="mutual-icon">📞</span>
+                <span class="mutual-name">电话关怀</span>
+                <span class="mutual-price">¥10/次</span>
+            </div>
+        </div>
+
+        <!-- 成功案例 -->
+        <div class="section-header">
+            <h3>成功案例</h3>
+        </div>
+
+        <div class="story-card-mini">
+            <div class="story-header">
+                <span class="story-avatar">👨‍🦳</span>
+                <div class="story-author">
+                    <h4>张大爷的故事</h4>
+                    <p>退休教师 | 平台讲师</p>
+                </div>
+            </div>
+            <p class="story-quote">"退休后感觉失去了价值，直到加入平台成为智能手机讲师。现在每月收入3000多元，更重要的是找到了生活的意义。"</p>
+        </div>
+
+        <!-- 底部留白 -->
+        <div class="bottom-spacer"></div>
+    </section>
+
+    <!-- 服务页面 -->
+    <section id="services" class="page">
+        <div class="page-header">
+            <h2>服务场景</h2>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card-large" data-service="thinktank">
+                <div class="service-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="service-icon-large">🧠</span>
+                    <h3>银发智库</h3>
+                    <p>经验变现，专业咨询</p>
+                </div>
+                <div class="service-body">
+                    <div class="service-stats-row">
+                        <span>2,000+ 专家入驻</span>
+                        <span>500+ 企业客户</span>
+                    </div>
+                    <ul class="service-list">
+                        <li>✓ 技术咨询与项目指导</li>
+                        <li>✓ 人才培养与培训</li>
+                        <li>✓ 企业顾问服务</li>
+                    </ul>
+                    <button class="btn-service-action">立即体验</button>
+                </div>
+            </div>
+
+            <div class="service-card-large" data-service="academy">
+                <div class="service-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <span class="service-icon-large">📚</span>
+                    <h3>银发学堂</h3>
+                    <p>技能共享，互相学习</p>
+                </div>
+                <div class="service-body">
+                    <div class="service-stats-row">
+                        <span>1,000+ 精品课程</span>
+                        <span>5,000+ 讲师</span>
+                    </div>
+                    <ul class="service-list">
+                        <li>✓ 财务规划课程</li>
+                        <li>✓ 职场沟通技巧</li>
+                        <li>✓ 智能手机使用</li>
+                    </ul>
+                    <button class="btn-service-action">立即体验</button>
+                </div>
+            </div>
+
+            <div class="service-card-large" data-service="mutual">
+                <div class="service-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <span class="service-icon-large">💝</span>
+                    <h3>银发互助</h3>
+                    <p>情感陪伴，温暖相伴</p>
+                </div>
+                <div class="service-body">
+                    <div class="service-stats-row">
+                        <span>3,000+ 互助者</span>
+                        <span>10,000+ 服务</span>
+                    </div>
+                    <ul class="service-list">
+                        <li>✓ 陪伴聊天服务</li>
+                        <li>✓ 日常照护协助</li>
+                        <li>✓ 就医陪同服务</li>
+                    </ul>
+                    <button class="btn-service-action">立即体验</button>
+                </div>
+            </div>
+
+            <div class="service-card-large" data-service="create">
+                <div class="service-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <span class="service-icon-large">✍️</span>
+                    <h3>银发创作</h3>
+                    <p>内容创作，分享人生</p>
+                </div>
+                <div class="service-body">
+                    <div class="service-stats-row">
+                        <span>50,000+ 原创内容</span>
+                        <span>100万+ 阅读</span>
+                    </div>
+                    <ul class="service-list">
+                        <li>✓ 文章与故事分享</li>
+                        <li>✓ 视频内容创作</li>
+                        <li>✓ 直播互动交流</li>
+                    </ul>
+                    <button class="btn-service-action">立即体验</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-spacer"></div>
+    </section>
+
+    <!-- 专家页面 -->
+    <section id="experts" class="page">
+        <div class="page-header">
+            <h2>银发智库</h2>
+        </div>
+
+        <!-- 搜索和筛选 -->
+        <div class="filter-bar">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="搜索专家姓名、领域...">
+            </div>
+        </div>
+
+        <div class="filter-tags">
+            <span class="filter-tag active">全部</span>
+            <span class="filter-tag">技术专家</span>
+            <span class="filter-tag">医疗专家</span>
+            <span class="filter-tag">财务专家</span>
+            <span class="filter-tag">教育专家</span>
+        </div>
+
+        <!-- 专家列表 -->
+        <div class="expert-list-full">
+            <div class="expert-card-full">
+                <div class="expert-header">
+                    <span class="expert-avatar-full">👨‍⚕️</span>
+                    <div class="expert-title-full">
+                        <h4>李秀芳 <span class="badge">认证</span></h4>
+                        <p>退休主任医师 · 40年经验</p>
+                    </div>
+                    <span class="expert-price-full">¥300/小时</span>
+                </div>
+                <div class="expert-tags-full">
+                    <span class="tag-mini">健康咨询</span>
+                    <span class="tag-mini">慢病管理</span>
+                    <span class="tag-mini">体检解读</span>
+                </div>
+                <div class="expert-rating-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">5.0分 (256条评价)</span>
+                    <span class="service-count">已服务 512 人</span>
+                </div>
+                <div class="expert-actions">
+                    <button class="btn-consult">立即咨询</button>
+                    <button class="btn-favorite">❤️</button>
+                </div>
+            </div>
+
+            <div class="expert-card-full">
+                <div class="expert-header">
+                    <span class="expert-avatar-full">👨‍💼</span>
+                    <div class="expert-title-full">
+                        <h4>张建国 <span class="badge">认证</span></h4>
+                        <p>退休高级工程师 · 35年经验</p>
+                    </div>
+                    <span class="expert-price-full">¥500/小时</span>
+                </div>
+                <div class="expert-tags-full">
+                    <span class="tag-mini">技术咨询</span>
+                    <span class="tag-mini">项目评审</span>
+                    <span class="tag-mini">工艺改进</span>
+                </div>
+                <div class="expert-rating-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9分 (128条评价)</span>
+                    <span class="service-count">已服务 256 人</span>
+                </div>
+                <div class="expert-actions">
+                    <button class="btn-consult">立即咨询</button>
+                    <button class="btn-favorite">❤️</button>
+                </div>
+            </div>
+
+            <div class="expert-card-full">
+                <div class="expert-header">
+                    <span class="expert-avatar-full">👩‍🏫</span>
+                    <div class="expert-title-full">
+                        <h4>陈雅琴 <span class="badge">认证</span></h4>
+                        <p>退休特级教师 · 38年经验</p>
+                    </div>
+                    <span class="expert-price-full">¥200/小时</span>
+                </div>
+                <div class="expert-tags-full">
+                    <span class="tag-mini">作文辅导</span>
+                    <span class="tag-mini">阅读指导</span>
+                    <span class="tag-mini">学习方法</span>
+                </div>
+                <div class="expert-rating-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9分 (167条评价)</span>
+                    <span class="service-count">已服务 334 人</span>
+                </div>
+                <div class="expert-actions">
+                    <button class="btn-consult">立即咨询</button>
+                    <button class="btn-favorite">❤️</button>
+                </div>
+            </div>
+
+            <div class="expert-card-full">
+                <div class="expert-header">
+                    <span class="expert-avatar-full">👨‍💼</span>
+                    <div class="expert-title-full">
+                        <h4>王明德 <span class="badge">认证</span></h4>
+                        <p>退休财务总监 · 30年经验</p>
+                    </div>
+                    <span class="expert-price-full">¥400/小时</span>
+                </div>
+                <div class="expert-tags-full">
+                    <span class="tag-mini">财务规划</span>
+                    <span class="tag-mini">税务咨询</span>
+                    <span class="tag-mini">理财建议</span>
+                </div>
+                <div class="expert-rating-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.8分 (89条评价)</span>
+                    <span class="service-count">已服务 178 人</span>
+                </div>
+                <div class="expert-actions">
+                    <button class="btn-consult">立即咨询</button>
+                    <button class="btn-favorite">❤️</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-spacer"></div>
+    </section>
+
+    <!-- 学堂页面 -->
+    <section id="courses" class="page">
+        <div class="page-header">
+            <h2>银发学堂</h2>
+        </div>
+
+        <!-- 课程分类 -->
+        <div class="course-categories">
+            <div class="category-item active">
+                <span class="category-icon">📱</span>
+                <span>智能设备</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">💰</span>
+                <span>理财规划</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🌺</span>
+                <span>兴趣爱好</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">💪</span>
+                <span>健康养生</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🎨</span>
+                <span>艺术文化</span>
+            </div>
+        </div>
+
+        <!-- 课程列表 -->
+        <div class="course-list-full">
+            <div class="course-card-full">
+                <div class="course-img-full" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="course-play">▶️</span>
+                </div>
+                <div class="course-content-full">
+                    <h4>智能手机使用入门 - 从入门到精通</h4>
+                    <p class="course-instructor">刘大爷 · 退休IT工程师</p>
+                    <div class="course-meta-full">
+                        <span class="course-students">👥 1,234人学习</span>
+                        <span class="course-rating">★ 4.9分</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-lessons">12节课 · 共3小时</span>
+                        <span class="course-price-tag free">免费</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card-full">
+                <div class="course-img-full" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <span class="course-play">▶️</span>
+                </div>
+                <div class="course-content-full">
+                    <h4>退休理财规划 - 让养老金保值增值</h4>
+                    <p class="course-instructor">赵阿姨 · 退休银行经理</p>
+                    <div class="course-meta-full">
+                        <span class="course-students">👥 892人学习</span>
+                        <span class="course-rating">★ 4.8分</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-lessons">8节课 · 共2小时</span>
+                        <span class="course-price-tag">¥29</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card-full">
+                <div class="course-img-full" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <span class="course-play">▶️</span>
+                </div>
+                <div class="course-content-full">
+                    <h4>家庭园艺技巧 - 打造阳台花园</h4>
+                    <p class="course-instructor">孙奶奶 · 退休园艺师</p>
+                    <div class="course-meta-full">
+                        <span class="course-students">👥 2,156人学习</span>
+                        <span class="course-rating">★ 4.9分</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-lessons">15节课 · 共4小时</span>
+                        <span class="course-price-tag free">免费</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card-full">
+                <div class="course-img-full" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <span class="course-play">▶️</span>
+                </div>
+                <div class="course-content-full">
+                    <h4>国画基础入门 - 梅兰竹菊</h4>
+                    <p class="course-instructor">周老师 · 退休美术教师</p>
+                    <div class="course-meta-full">
+                        <span class="course-students">👥 567人学习</span>
+                        <span class="course-rating">★ 5.0分</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-lessons">20节课 · 共6小时</span>
+                        <span class="course-price-tag">¥49</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-spacer"></div>
+    </section>
+
+    <!-- 个人中心页面 -->
+    <section id="profile" class="page">
+        <!-- 用户信息 -->
+        <div class="profile-header">
+            <div class="profile-bg"></div>
+            <div class="profile-info">
+                <div class="profile-avatar">👤</div>
+                <div class="profile-text">
+                    <h3>点击登录</h3>
+                    <p>登录后享受更多服务</p>
+                </div>
+                <span class="profile-arrow">></span>
+            </div>
+        </div>
+
+        <!-- 功能入口 -->
+        <div class="profile-menu">
+            <div class="menu-item">
+                <span class="menu-icon">📝</span>
+                <span class="menu-text">我的预约</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">📚</span>
+                <span class="menu-text">我的课程</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">❤️</span>
+                <span class="menu-text">我的收藏</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">💬</span>
+                <span class="menu-text">我的消息</span>
+                <span class="badge-count">3</span>
+                <span class="menu-arrow">></span>
+            </div>
+        </div>
+
+        <!-- 成为提供者 -->
+        <div class="become-provider">
+            <h4>成为价值创造者</h4>
+            <div class="provider-options">
+                <div class="provider-option">
+                    <span class="provider-icon">👨‍🏫</span>
+                    <span>成为专家</span>
+                </div>
+                <div class="provider-option">
+                    <span class="provider-icon">📚</span>
+                    <span>成为讲师</span>
+                </div>
+                <div class="provider-option">
+                    <span class="provider-icon">🤝</span>
+                    <span>成为志愿者</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 其他功能 -->
+        <div class="profile-menu">
+            <div class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span class="menu-text">地址管理</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">💳</span>
+                <span class="menu-text">钱包</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">⚙️</span>
+                <span class="menu-text">设置</span>
+                <span class="menu-arrow">></span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-icon">📞</span>
+                <span class="menu-text">联系客服</span>
+                <span class="menu-arrow">></span>
+            </div>
+        </div>
+
+        <!-- 平台信息 -->
+        <div class="platform-info">
+            <p>客服热线：400-888-8888</p>
+            <p>服务时间：9:00-18:00</p>
+            <p class="version">版本 1.0.0</p>
+        </div>
+
+        <div class="bottom-spacer"></div>
+    </section>
+
+    <!-- 登录弹窗 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>欢迎登录</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>手机号</label>
+                    <input type="tel" placeholder="请输入手机号" maxlength="11">
+                </div>
+                <div class="form-group">
+                    <label>验证码</label>
+                    <div class="verify-box">
+                        <input type="text" placeholder="请输入验证码" maxlength="6">
+                        <button type="button" class="btn-get-code">获取验证码</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn-login-submit">登录</button>
+            </form>
+            <p class="login-tips">未注册手机号验证后将自动创建账号</p>
+        </div>
+    </div>
+
+    <script src="mobile.js"></script>
+</body>
+</html>
