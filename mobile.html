@@ -736,6 +736,199 @@
         </div>
     </div>
 
+    <!-- 课程详情弹窗 -->
+    <div class="modal" id="courseDetailModal">
+        <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h3 id="courseDetailTitle">课程详情</h3>
+                <button class="modal-close" onclick="closeCourseDetail()">✕</button>
+            </div>
+            
+            <!-- 视频占位符 -->
+            <div class="video-placeholder coming-soon" style="margin: 0 -20px 16px; border-radius: 0;">
+                <span class="play-icon">▶️</span>
+                <span class="video-text">视频即将上线</span>
+                <span class="video-hint">敬请期待</span>
+            </div>
+            
+            <!-- 课程信息 -->
+            <div class="course-detail-header" style="padding: 0; margin-bottom: 16px;">
+                <h4 class="course-detail-title" id="courseDetailName">课程名称</h4>
+                <div class="course-detail-meta">
+                    <span>👥 <span id="courseDetailStudents">0</span>人学习</span>
+                    <span>★ <span id="courseDetailRating">0</span>分</span>
+                    <span>📚 <span id="courseDetailLessons">0</span>节课</span>
+                </div>
+            </div>
+            
+            <!-- 讲师信息 -->
+            <div class="instructor-info" style="padding: 16px 0; margin-bottom: 16px;">
+                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px;">讲师介绍</h3>
+                <div class="instructor-profile">
+                    <div class="instructor-avatar-large" id="courseDetailInstructorAvatar">👨‍🏫</div>
+                    <div class="instructor-detail">
+                        <h4 id="courseDetailInstructorName">讲师姓名</h4>
+                        <p id="courseDetailInstructorTitle">讲师头衔</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 课程章节 -->
+            <div class="course-chapters" style="padding: 0; margin-bottom: 16px;">
+                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px;">课程章节</h3>
+                <div id="courseChaptersList">
+                    <!-- 动态生成章节列表 -->
+                </div>
+            </div>
+            
+            <!-- 底部按钮 -->
+            <div style="display: flex; gap: 12px; margin-top: 20px;">
+                <button class="btn-favorite-action">🤍</button>
+                <button class="btn-enroll" onclick="enrollCourse()">立即报名</button>
+            </div>
+        </div>
+    </div>
+
     <script src="mobile.js"></script>
+    <script>
+        // 课程详情数据
+        const courseDetails = {
+            '智能手机使用入门 - 从入门到精通': {
+                instructor: '刘大爷',
+                title: '退休IT工程师',
+                students: '1,234',
+                rating: '4.9',
+                lessons: '12',
+                avatar: '👨‍💻',
+                chapters: [
+                    { title: '第1课：手机基本操作', duration: '15分钟', status: 'free' },
+                    { title: '第2课：微信使用技巧', duration: '20分钟', status: 'free' },
+                    { title: '第3课：拍照与相册管理', duration: '18分钟', status: 'lock' },
+                    { title: '第4课：安全设置与防护', duration: '15分钟', status: 'lock' }
+                ]
+            },
+            '退休理财规划 - 让养老金保值增值': {
+                instructor: '赵阿姨',
+                title: '退休银行经理',
+                students: '892',
+                rating: '4.8',
+                lessons: '8',
+                avatar: '👩‍💼',
+                chapters: [
+                    { title: '第1课：退休理财基础概念', duration: '20分钟', status: 'preview' },
+                    { title: '第2课：养老金管理策略', duration: '25分钟', status: 'lock' },
+                    { title: '第3课：稳健投资产品选择', duration: '30分钟', status: 'lock' },
+                    { title: '第4课：风险防范与保障', duration: '22分钟', status: 'lock' }
+                ]
+            },
+            '太极拳养生入门 - 强身健体修身养性': {
+                instructor: '陈师傅',
+                title: '退休武术教练',
+                students: '892',
+                rating: '4.9',
+                lessons: '15',
+                avatar: '🧘‍♂️',
+                chapters: [
+                    { title: '第1课：太极拳基础站姿', duration: '15分钟', status: 'free' },
+                    { title: '第2课：起势与呼吸法', duration: '20分钟', status: 'free' },
+                    { title: '第3课：野马分鬃', duration: '25分钟', status: 'free' },
+                    { title: '第4课：白鹤亮翅', duration: '22分钟', status: 'lock' }
+                ]
+            },
+            '家庭烘焙基础 - 面包蛋糕轻松做': {
+                instructor: '李阿姨',
+                title: '退休面点师',
+                students: '1,567',
+                rating: '4.8',
+                lessons: '10',
+                avatar: '👩‍🍳',
+                chapters: [
+                    { title: '第1课：烘焙工具与原料', duration: '18分钟', status: 'preview' },
+                    { title: '第2课：基础面团制作', duration: '25分钟', status: 'lock' },
+                    { title: '第3课：戚风蛋糕做法', duration: '35分钟', status: 'lock' },
+                    { title: '第4课：曲奇饼干制作', duration: '28分钟', status: 'lock' }
+                ]
+            },
+            '手机摄影技巧 - 记录美好生活瞬间': {
+                instructor: '张大爷',
+                title: '退休摄影师',
+                students: '2,341',
+                rating: '5.0',
+                lessons: '12',
+                avatar: '📷',
+                chapters: [
+                    { title: '第1课：手机相机功能介绍', duration: '15分钟', status: 'preview' },
+                    { title: '第2课：构图基础技巧', duration: '22分钟', status: 'lock' },
+                    { title: '第3课：光线运用方法', duration: '25分钟', status: 'lock' },
+                    { title: '第4课：人像拍摄技巧', duration: '28分钟', status: 'lock' }
+                ]
+            }
+        };
+
+        // 显示课程详情
+        function showCourseDetail(courseTitle) {
+            const modal = document.getElementById('courseDetailModal');
+            const course = courseDetails[courseTitle];
+            
+            if (course) {
+                document.getElementById('courseDetailName').textContent = courseTitle;
+                document.getElementById('courseDetailStudents').textContent = course.students;
+                document.getElementById('courseDetailRating').textContent = course.rating;
+                document.getElementById('courseDetailLessons').textContent = course.lessons;
+                document.getElementById('courseDetailInstructorName').textContent = course.instructor;
+                document.getElementById('courseDetailInstructorTitle').textContent = course.title;
+                document.getElementById('courseDetailInstructorAvatar').textContent = course.avatar;
+                
+                // 生成章节列表
+                const chaptersHtml = course.chapters.map((chapter, index) => `
+                    <div class="chapter-item">
+                        <div class="chapter-number">${index + 1}</div>
+                        <div class="chapter-info">
+                            <div class="chapter-title">${chapter.title}</div>
+                            <div class="chapter-duration">⏱️ ${chapter.duration}</div>
+                        </div>
+                        <div class="chapter-status">
+                            ${chapter.status === 'free' ? '▶️' : chapter.status === 'preview' ? '👁️' : '🔒'}
+                        </div>
+                    </div>
+                `).join('');
+                
+                document.getElementById('courseChaptersList').innerHTML = chaptersHtml;
+                
+                modal.classList.add('active');
+            } else {
+                // 如果没有详细数据，显示简化版本
+                document.getElementById('courseDetailName').textContent = courseTitle;
+                document.getElementById('courseDetailStudents').textContent = '0';
+                document.getElementById('courseDetailRating').textContent = '0';
+                document.getElementById('courseDetailLessons').textContent = '0';
+                document.getElementById('courseDetailInstructorName').textContent = '讲师';
+                document.getElementById('courseDetailInstructorTitle').textContent = '即将上线';
+                document.getElementById('courseDetailInstructorAvatar').textContent = '👨‍🏫';
+                document.getElementById('courseChaptersList').innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">课程详情即将上线</p>';
+                modal.classList.add('active');
+            }
+        }
+
+        // 关闭课程详情
+        function closeCourseDetail() {
+            document.getElementById('courseDetailModal').classList.remove('active');
+        }
+
+        // 报名课程
+        function enrollCourse() {
+            showToast('请先登录后再报名课程');
+        }
+
+        // 覆盖原有的课程卡片点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.course-card-full, .course-card-mini').forEach(card => {
+                card.addEventListener('click', function() {
+                    const courseTitle = this.querySelector('h4').textContent;
+                    showCourseDetail(courseTitle);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
